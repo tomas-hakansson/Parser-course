@@ -1,0 +1,61 @@
+﻿Simpl is a simple language meant solely for parsing. It's not intended to be useful in any way or even consistent.
+
+Here is a syntax example:
+
+""
+a : 42
+b : 'hello'
+
+say(b)
+
+from( 0 )to( a )do{ x |
+    say['we have looped ', x + 1, " times"]
+    if(test() & validate(a)
+    )then{
+        list = [1, 2, 3]
+        product(list)
+        pow = { y | 2 ^ y}
+        pows = map(pow)over(list) //Note: synonymous with 'pows = map{y | 2 ^ y}over[list]' and with 'pows = map({y|2^y})over([list])'
+        say(a + x * codepoint-count(b))
+    }else{
+        n : 4 * (2 + 5)
+        do-the-thing( n )times
+        say('no')
+    }
+}
+""
+
+Here is the grammar of the syntax above:
+todo: specify whitespace:
+
+program       => expression*
+expression    => assignment
+assignment    => (conjunction ':')* conjunction
+conjunction   => sum ('&' sum)*
+sum           => product ('+' product)*
+product       => value ('*' value)*
+value         => number | string | place | parenthesised | sequence | block | function
+place         => name //Note: anything that can be seen as a variable (x, x(4), some complex expression that points at a value).
+parenthesised => "(" expression ")"
+sequence      => "[" expression (',' expression)*"]" |
+block         => "{" program "}"
+function      => name '()' | name argument function* name?
+name          => "[A-Za-z][A-Za-z0-9-]*"
+argument      => parenthesised | sequence | block
+
+older version of the grammar:
+
+program       => expression*
+expression    => assignment
+assignment    => conjunction (':' assignment)?
+conjunction   => (conjunction '&')? sum
+sum           => (sum '+')? product
+product       => (product '*')? value
+value         => number | string | place | parenthesised | sequence | block | function
+place         => name //Note: anything that can be seen as a variable (x, x(4), some complex expression that points at a value).
+parenthesised => "(" expression ")"
+sequence      => "[" expression (',' expression)*"]" |
+block         => "{" program "}"
+function      => name '()' | name argument function* name?
+name          => "[A-Za-z][A-Za-z0-9-]*"
+argument      => parenthesised | sequence | block

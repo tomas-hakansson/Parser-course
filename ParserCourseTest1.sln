@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParserCourseTest1", "ParserCourseTest1\ParserCourseTest1.csproj", "{0ED370AD-3EA3-4498-9F2D-89D9E5C30A1A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{401B7D40-40AA-4B17-8124-35569096E9CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ED370AD-3EA3-4498-9F2D-89D9E5C30A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED370AD-3EA3-4498-9F2D-89D9E5C30A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED370AD-3EA3-4498-9F2D-89D9E5C30A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED370AD-3EA3-4498-9F2D-89D9E5C30A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401B7D40-40AA-4B17-8124-35569096E9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401B7D40-40AA-4B17-8124-35569096E9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401B7D40-40AA-4B17-8124-35569096E9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401B7D40-40AA-4B17-8124-35569096E9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7308C756-14B6-404B-B867-3B35A218DDAB}
+	EndGlobalSection
+EndGlobal
